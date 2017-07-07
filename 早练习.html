@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>完全数</title>
+    </head>
+    <body>
+    	<input type="text" id="wqs" onblur="show()">
+    	<span id="aa"></span>
+    </body>
+    <script>
+    	function show(){
+    		var wqs = document.getElementById("wqs").value
+    		var aa  = document.getElementById("aa")
+    		for(var i = 0,n=0;i<100000;i++){
+    			if(wqs%i==0&&wqs !=i){
+    				console.log(i)
+    				n += i;
+    				console.log(n)
+    				if (wqs==n) {
+    					aa.innerHTML = "完全数"
+    				}else{
+    					aa.innerHTML = "不是完全数"
+    				}
+    			}
+    		};
+    	}
+    </script>
+</html>
